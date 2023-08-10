@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Dark and light Theme</title>
+    <style>
+
+        #header
+        {
+            text-align: center;
+        }
+
+        .body-dark
+        {
+            color: white;
+            background-color:  #262626;
+        }
+
+        .body-light
+        {
+            color: black;
+            background-color:  	rgb(242, 242, 242);
+        }
+
+        .btns
+        {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .theme
+        {
+            font-size: 25px;
+            border-radius: 4px;
+        }
+
+        .theme:hover
+        {
+            background-color: springgreen;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        
+
+    </style>
+
+</head>
+<body  class="body-light" id="body">
+
+    <h1 id="header">Dark And Light Theme</h1>
+
+    <div class="btns">
+        <button onclick="DarkTheme()" class="theme">Dark</button>
+        <button onclick="LightTheme()" class="theme">Light</button>
+    </div>
+
+
+    <script>
+        function DarkTheme()
+        {
+            const bodyElement = document.getElementById('body');
+            bodyElement.classList.remove('body-light');
+            bodyElement.classList.add('body-dark');
+        }
+
+        function LightTheme()
+        {
+            const bodyElement = document.getElementById('body');
+            bodyElement.classList.remove('body-dark');
+            bodyElement.classList.add('body-light');
+        }
+    </script>
+    
+</body>
+</html>
